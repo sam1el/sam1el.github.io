@@ -28,7 +28,7 @@ twitter_username: sam1el
 github_username:  sam1el
 
 # Build settings
-theme: minima
+theme: jekyll-theme-chirpy
 plugins:
   - jekyll-feed
 
