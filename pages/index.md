@@ -4,7 +4,7 @@ title: Docsy Jekyll Theme
 permalink: /
 ---
 
-# Welcome to Docsy Jekyll
+# Welcome to your new Docsy Jekyll theme!
 
 This is a starter template for a docsy jekyll theme.
 
