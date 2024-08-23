@@ -1,101 +1,114 @@
-# Docsy Jekyll Theme
 
-[![CircleCI](https://circleci.com/gh/vsoch/docsy-jekyll/tree/master.svg?style=svg)](https://circleci.com/gh/vsoch/docsy-jekyll/tree/master)
-<a href="https://jekyll-themes.com/docsy-jekyll/">
-    <img src="https://img.shields.io/badge/featured%20on-JT-red.svg" height="20" alt="Jekyll Themes Shield" >
-</a>
+# hackathon
 
-![https://raw.githubusercontent.com/vsoch/docsy-jekyll/master/assets/img/docsy-jekyll.png](https://raw.githubusercontent.com/vsoch/docsy-jekyll/master/assets/img/docsy-jekyll.png)
+## Introduction to GitHub Pages and Jekyll
 
-This is a [starter template](https://vsoch.github.com/docsy-jekyll/) for a Docsy jekyll theme, based
-on the Beautiful [Docsy](https://github.com/google/docsy) that renders with Hugo. This version is intended for
-native deployment on GitHub pages. The original [Apache License](https://github.com/vsoch/docsy-jekyll/blob/master/LICENSE) is included.
+This is a simple guide to get you started with Github Pages and Jekyll. For this we will focus mainly on the following:
 
-## Changes
+- What is GitHub Pages?
+- What is Jekyll?
+- How does Jekyll work?
+- Liquid and Front Matter
+- How to create a GitHub Pages site with Jekyll
 
-The site is intended for purely documentation, so while the front page banner
-is useful for business or similar, this author (@vsoch) preferred to have
-the main site page go directly to the Documentation view. Posts
-are still provided via a feed.
 
-## Usage
+## What is GitHub Pages?
 
-### 1. Get the code
+GitHub Pages is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website. You can see examples of GitHub Pages sites by checking out the GitHub Pages Showcase. Note: GitHub Pages sites are subject to the following usage limits:
 
-You can clone the repository right to where you want to host the docs:
+- GitHub Pages source repositories have a recommended limit of 1GB.
+- GitHub Pages sites have a soft bandwidth limit of 100GB per month.
+- Should not be used to build a commercial site
+
+## What is Jekyll?
+
+Jekyll is a static site generator that's perfect for personal, project, or organization sites. With Jekyll, you can create a simple blog, portfolio, or resume site. You can also use Jekyll to create a more complex site, like a documentation site. Jekyll is a great way to create a site that's easy to maintain and update.
+
+
+## How does jekyll work?
+
+Jekyll is a static site generator that takes a collection of text files and turns them into a website. Jekyll does this by combining the text files with a layout. The layout is a template that gives the site its basic structure. Jekyll also uses a configuration file to determine how to build the site. The configuration file tells Jekyll where to find the text files, where to find the layout, and where to put the finished website. Jekyll also uses a special folder called `_site` to store the finished website. When you run Jekyll, it takes the text files, combines them with the layout, and puts the finished website in the `_site` folder. You can then copy the contents of the `_site` folder to a web server to make the site live.
+
+## What is a static site generator?
+
+A static site generator is a tool that takes a collection of text files and turns them into a website. The text files are written in a markup language like Markdown or HTML. The static site generator combines the text files with a layout to create the website. The layout is a template that gives the site its basic structure. The static site generator also uses a configuration file to determine how to build the site. The configuration file tells the static site generator where to find the text files, where to find the layout, and where to put the finished website. The static site generator also uses a special folder to store the finished website. When you run the static site generator, it takes the text files, combines them with the layout, and puts the finished website in the special folder. You can then copy the contents of the special folder to a web server to make the site live.
+
+## Liquid and Front Matter
+
+- Liquid is a templating language that Jekyll uses to process templates. Liquid is a simple language that allows you to insert variables, loops, and conditionals into your templates. Liquid is used to generate the site. Liquid is not displayed on the site. Liquid is a way to generate a site from a set of text files and a layout.
+
+- Front Matter is a block of YAML or JSON at the beginning of a file that is used to set variables for the file. Front Matter is used to set variables like the title of a page, the layout of a page, and the date of a page. Front Matter is processed by Jekyll and used to generate the site. Front Matter is not displayed on the site. Front Matter is a way to set variables for a file that are used by Jekyll to generate the site.
+
+   ```markdown
+   ---
+   layout: post
+   title:  "Example Jenkinsfile for publishing cookbooks to Artifactory"
+   date:   2021-06-22 09:35:12 -0500
+   categories: Demo Jenkinsfile
+   ---
+   ```
+
+## How to create a GitHub Pages site with Jekyll
+
+1. Create a new repository on GitHub, name it `<your-github-username>.github.io`. To avoid errors, do not initialize the new repository with README, license, or gitignore files. You can add these files after your project has been pushed to GitHub.
+
+2. Open Terminal.
+
+3. Change to the directory where you want to store your project.
+
+4. Run the following command:
 
 ```bash
-git clone https://github.com/vsoch/docsy-jekyll.git docs
-cd docs
+git clone
 ```
 
-### 2. Customize
+5. Go to the directory where you cloned your repository.
 
-To edit configuration values, customize the [_config.yml](https://github.com/vsoch/docsy-jekyll/blob/master/_config.yml).
-To add pages, write them into the [pages](https://github.com/vsoch/docsy-jekyll/blob/master/pages) folder. 
-You define urls based on the `permalink` attribute in your pages,
-and then add them to the navigation by adding to the content of [_data/toc.myl](https://github.com/vsoch/docsy-jekyll/blob/master/_data/toc.yml).
-The top navigation is controlled by [_data/navigation.yml](https://github.com/vsoch/docsy-jekyll/blob/master/_data/navigation.yml)
-
-### 3. Options
-
-Most of the configuration values in the [_config.yml](https://github.com/vsoch/docsy-jekyll/blob/master/_config.yml) are self explanatory,
-and for more details, see the [getting started page](https://vsoch.github.io/docsy-jekyll/docs/getting-started)
-rendered on the site.
-
-### 4. Serve
-
-Depending on how you installed jekyll:
+6. Run the following command:
 
 ```bash
-jekyll serve
-# or
+jekyll new .
+```
+
+7. Run the following command:
+
+```bash
+bundle install
+```
+
+8. Run the following command:
+
+```bash
 bundle exec jekyll serve
 ```
 
-**NOTE:** If the above serve command throws an error saying `require': cannot load such file -- webrick (LoadError)` try to run `bundle add webrick` to automatically add the webrick gem to your Gemfile, or manually add `gem "webrick"` line to the Gemfile and then run the serve command again.
+9. Go to `http://localhost:4000` in your browser to see your site.
 
+10. Make changes to your site and see them reflected in your browser.
 
-### 5. Run as a container in dev or prod
+11. When you're happy with your site, stop the Jekyll server by pressing `Ctrl+C` in your terminal.
 
-#### Software Dependencies
-
-If you want to run docsy jekyll via a container for development (dev) or production (prod) you can use containers. This approach requires installing [docker-ce](https://docs.docker.com/engine/install/ubuntu/) and [docker-compose](https://docs.docker.com/compose/install/). 
-
-#### Customization
-
-Note that the [docker-compose.yml](docker-compose.yml) file is using the [jekyll/jekyll:3.8](https://hub.docker.com/r/jekyll/jekyll/tags) image. If you want to make your build more reproducible, you can specify a particular version for jekyll (tag). Note that at the development time of writing this documentation, the latest was tag 4.0.0,
-and it [had a bug](https://github.com/fastai/fastpages/issues/267#issuecomment-620612896) that prevented the server from deploying.
-
-If you are deploying a container to production, you should remove the line to
-mount the bundles directory to the host in the docker-compose.yml. Change:
-
-```yaml
-    volumes: 
-      - "./:/srv/jekyll"
-      - "./vendor/bundle:/usr/local/bundle"
-      # remove "./vendor/bundle:/usr/local/bundle" volume when deploying in production
-```
-
-to:
-
-```yaml
-    volumes: 
-      - "./:/srv/jekyll"
-```
-
-This additional volume is optimal for development so you can cache the bundle dependencies,
-but should be removed for production. 
-
-#### Start Container
-
-Once your docker-compose to download the base container and bring up the server:
+12. Run the following command:
 
 ```bash
-docker-compose up -d
+git add .
 ```
 
-You can then open your browser to [http://localhost:4000](http://localhost:4000)
-to see the server running.
+13. Run the following command:
 
-> Node : changes `baseurl: ""` in _config.yml  when you are running in local and prod according to the requirement.
+```bash
+git commit -m "Initial commit"
+```
+
+14. Run the following command:
+
+```bash
+git push
+```
+
+15. Go to `https://<your-github-username>.github.io/<your-repository-name>` in your browser to see your site.
+
+16. Share your site.
+
+
+__**Note:**__ If you want to do the majority of the setup directly in github, it can be done in the repo settings. Create the repository, name it `<your-github-username>.github.io`, and then go to the settings tab. Scroll down to the GitHub Pages section and select the `main` branch as the source. Select github actions as the controller and jekyll as the framerwork. This will genrate a basic configuration file for you. You can then clone the repository and follow the steps above to get started.
