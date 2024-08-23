@@ -27,7 +27,7 @@ baseurl: "/docsy-jekyll" # the subpath of your site, e.g. /blog
 url: "https://sam1el.github.io" # the base hostname & protocol for your site
 
 # Social (First three Required)
-repo: "https://github.com/sam1el/sam1el"
+repo: "https://github.com/sam1el/sam1el.github.io"
 github_user: "sam1el"
 github_repo: "sam1el.github.io"
 github_branch: "main"
@@ -89,6 +89,10 @@ collections:
   docs:
     output: true
     permalink: /:collection/:path
+  posts:
+    output: true
+    permalink: /:collection/:path
+
 
 # Defaults
 defaults:
@@ -106,6 +110,6 @@ defaults:
   -
     scope:
       path: "_posts"
-      type: "post"
+      type: "posts"
     values:
       layout: post

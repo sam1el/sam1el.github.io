@@ -10,14 +10,17 @@
           url: "docs/getting-started#development"
         - title: Customization
           url: "docs/getting-started#customization"
-        - title: Hackathon
-          url: "docs/hackathon#hackathon"
     - title: Versioning
       url: "docs/versioning"
     - title: "About"
       url: "about"
     - title: "News"
       url: "news"
+- title: "Posts"
+  url: "posts/"
+  links:
+    - title: "Hello World"
+      url: "posts/2019-06-28-hello-world"
 - title: "Extras"
   url: "docs/extras"
   links:
